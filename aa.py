@@ -30,3 +30,19 @@ print(f)
 # 多个变量赋值
 g = h = i = j = k = 100
 print(g)
+
+l = 909
+m = str(l)
+print(m)
+
+list1 = ['两点水', 'twowter', 'liangdianshui', 123]
+print(list1)
+# 通过索引对列表的数据项进行修改或更新
+list1[2] = 456
+print(list1)
+# 使用 append() 方法来添加列表项
+list1.append('hello')
+print(list1)
+# 使用 del 语句来删除列表的的元素
+del list1[1]
+print(list1)
