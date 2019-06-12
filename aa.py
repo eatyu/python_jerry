@@ -46,3 +46,9 @@ print(list1)
 # 使用 del 语句来删除列表的的元素
 del list1[1]
 print(list1)
+
+print(len([1, 2, 3]))  # 3	计算元素个数
+
+print([1, 2, 3] + [4, 5, 6])  # [1, 2, 3, 4, 5, 6]	组合
+print(['Hi!'] * 4)  # ['Hi!', 'Hi!', 'Hi!', 'Hi!']	复制
+print(3 in [1, 2, 3])  # True	元素是否存在于列表中
