@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+title = r'''I will win,i need know how to solve image.'''
+print(title)
 print("sss")
 #  不需要转义
 a = r'不需要转义dasda/dsad/w/ads/wd/a\n'
