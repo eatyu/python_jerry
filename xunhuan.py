@@ -36,6 +36,6 @@ def search(names, special):
         print("not found")
 
 
-firstname = ["tom", "tony", "zik"]
-search(firstname, "tom")
-search(firstname, "opop")
+first_name = ["tom", "tony", "zik"]
+search(first_name, "tom")
+search(first_name, "opop")
