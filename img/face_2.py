@@ -6,6 +6,7 @@ import cv2
 import img.basev as ba
 
 temp_video = ba.TEMP_VIDEO
+img_path = ba.IMG_PATH
 name = 'tooooom'
 
 
@@ -32,6 +33,7 @@ def getface(path):
                 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # 转为灰度图
                 cv2.imshow("Find Faces!", image)
                 cv2.waitKey(0)
+                cv2.imwrite(img_path + 'waitdel.jpg', image)
 
             out_count = 101
         #
