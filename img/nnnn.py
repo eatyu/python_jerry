@@ -28,7 +28,7 @@ def getface(path):
                 # img_new = cv2.resize(image, (57, 57), interpolation=cv2.INTER_CUBIC)  # 处理面部的大小
                 cv2.imshow("Find Faces!", image)
                 # cv2.waitKey(0)
-                cv2.imwrite('C:/DoVideo/img/' + name + '_%d.jpg' % out_count, image)  # 存储到指定目录
+                cv2.imwrite('C:/DoVideo/img/' + name + '/_%d.jpg' % out_count, image)  # 存储到指定目录
                 print('成功提取' + name + '的第%d个脸部' % out_count)
                 break  # 每帧只获取一张脸，删除这个即为读出全部面部
             out_count += 1
