@@ -33,7 +33,7 @@ def getface(path):
                 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # 转为灰度图
                 # cv2.imshow("Find Faces!", image)
                 # cv2.waitKey(0)
-                cv2.imwrite(img_path + 'waitdel.jpg', image)
+                cv2.imwrite(img_path + 'deldir/'+'waitdel.jpg', image)
                 break
             out_count += 1
         #
