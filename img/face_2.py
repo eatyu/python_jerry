@@ -51,5 +51,7 @@ def getface(path):
         #
 
 
+print(img_path)
+
 if __name__ == '__main__':
     getface(temp_video)  # 参数为视频地址
