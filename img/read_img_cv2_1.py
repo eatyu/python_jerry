@@ -20,5 +20,7 @@ if k == 27:  # wait for ESC key to exit
     cv2.destroyAllWindows()
 
 cv2.imwrite("temp2_copy.jpg", img)
-# 第三个参数是 质量     quality，用0-100的整数表示，默认为95
+# 还有第三个参数，针对特定的图像格式，对于JPEG，其表示的是图片的quality，用0-100的整数表示，默认为95
 cv2.imwrite('temp2_copy_poor_quality.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 10])
+# 对于PNG，第三个参数表示的是压缩级别。cv2.IMWRITE_PNG_COMPRESSION，从0到9,压缩级别越高，图像尺寸越小。默认级别为3
+cv2.imwrite('temp2_copy_png_compression.png', img, [cv2.IMWRITE_PNG_COMPRESSION, 9])
