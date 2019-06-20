@@ -18,7 +18,7 @@ def getface(path):
     out_count = 0
     while suc:
         frame_count += 1
-        if out_count > 100:  # 最多取出多少张
+        if out_count > 1000:  # 最多取出多少张
             break
         suc, frame = cap.read()  # 读取一帧
         params = []
@@ -31,11 +31,11 @@ def getface(path):
                 x, y, w, h = faceRect
                 image = frame[y - 10: y + h + 10, x - 10: x + w + 10]
                 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # 转为灰度图
-                cv2.imshow("Find Faces!", image)
-                cv2.waitKey(0)
+                # cv2.imshow("Find Faces!", image)
+                # cv2.waitKey(0)
                 cv2.imwrite(img_path + 'waitdel.jpg', image)
-
-            out_count = 101
+                break
+            out_count += 1
         #
         # if len(faceRects) > 0:  # 大于0则检测到人脸
         #     for faceRect in faceRects:  # 单独框出每一张人脸

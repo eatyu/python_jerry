@@ -21,15 +21,15 @@ def getface(path):
         params = []
         params.append(2)  # params.append(1)
         grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  # 将当前桢图像转换成灰度图像
-        faceRects = classfier.detectMultiScale(grey, scaleFactor=1.15, minNeighbors=5, minSize=(5, 5))  # 读取脸部位置
+        faceRects = classfier.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))  # 读取脸部位置
         if len(faceRects) > 0:  # 大于0则检测到人脸
             for faceRect in faceRects:  # 单独框出每一张人脸
                 x, y, w, h = faceRect
                 image = frame[y - 10: y + h + 10, x - 10: x + w + 10]
                 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # 转为灰度图
-                img_new = cv2.resize(image, (57, 57), interpolation=cv2.INTER_CUBIC)  # 处理面部的大小
+                # img_new = cv2.resize(image, (57, 57), interpolation=cv2.INTER_CUBIC)  # 处理面部的大小
                 cv2.imshow("Find Faces!", image)
-                cv2.imwrite('C:/DoVideo/img/' + name + '/%d.jpg' % out_count, img_new, params)  # 存储到指定目录
+                cv2.imwrite('C:/DoVideo/img/' + name + '/%d.jpg' % out_count, image, params)  # 存储到指定目录
                 out_count += 1
                 print('成功提取' + name + '的第%d个脸部' % out_count)
                 break  # 每帧只获取一张脸，删除这个即为读出全部面部
