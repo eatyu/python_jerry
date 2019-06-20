@@ -8,3 +8,7 @@ pip install matplotlib
 
 
 其中要升级 pip
+
+
+添加openCV
+pip3 install opencv-python
