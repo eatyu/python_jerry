@@ -12,3 +12,4 @@ pip install matplotlib
 
 添加openCV
 pip3 install opencv-python
+这样添加的 没有代码提示，利用pycharm的管理工具重新安装包，就好了
