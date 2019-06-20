@@ -19,6 +19,8 @@ k = cv2.waitKey(0) & 0xFF
 if k == 27:  # wait for ESC key to exit
     cv2.destroyAllWindows()
 
+# 保存
+
 cv2.imwrite("temp2_copy.jpg", img)
 # 还有第三个参数，针对特定的图像格式，对于JPEG，其表示的是图片的quality，用0-100的整数表示，默认为95
 cv2.imwrite('temp2_copy_poor_quality.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 10])
