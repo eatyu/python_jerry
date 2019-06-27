@@ -19,6 +19,13 @@ def get_imgs(path):
     # 提取面部图片
     cap = cv2.VideoCapture(path)
     suc = cap.isOpened()
+    cap.set(1, 90)  # Where frame_no is the frame you want
+    ret, frame = cap.read()  # Read the frame
+    cv2.imshow('window_name', frame)
+    cv2.waitKey(0)
+
+    cap.release()
+    cv2.destroyAllWindows()
 
 
 if __name__ == '__main__':
