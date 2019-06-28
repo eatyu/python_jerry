@@ -4,7 +4,7 @@ import cv2
 import img.basev as ba
 
 cap = cv2.VideoCapture(0)
-print(cap.get(cv2.CAP_PROP_FPS))
+print(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 print(cap.isOpened())
 
 while cap.isOpened():
