@@ -10,9 +10,9 @@ cap = cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'DIVX')
 out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
 
-while (cap.isOpened()):
+while cap.isOpened():
     ret, frame = cap.read()
-    if ret == True:
+    if ret:
 
         # 下面这行代码会把画面倒置
         # frame2 = cv2.flip(frame, 0)
