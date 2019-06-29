@@ -27,15 +27,15 @@ def get_imgs(path):
         if len(faceRects) > 0:
             for faceRect in faceRects:  # 单独框出每一张人脸
                 x, y, w, h = faceRect
-                # image = frame[y - 10: y + h + 10, x - 10: x + w + 10]
-                image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  # 转为灰度图
+                image = frame[y - 10: y + h + 10, x - 10: x + w + 10]
+                image = cv2.cvtColor(frame, cv2.COLOR_BGR2BGRA)  #
                 cv2.rectangle(image, (x, y), (x + w, y + w), (0, 255, 0), 2)
                 cv2.imshow("Find Faces!", image)
                 # cv2.waitKey(0)
                 break  # 每帧只获取一张脸，删除这个即为读出全部面部
 
         cv2.imshow('frame', frame)
-        if cv2.waitKey(20) == 27:  # esc
+        if cv2.waitKey(25) == 27:  # esc
             # if cv2.waitKey(1) == ord('q'):
             break
 

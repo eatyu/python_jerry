@@ -6,6 +6,7 @@ VIDEO_PATH = r'..\DoVideo'
 IMG_PATH = r'..\DoVideo\Img'
 
 TEMP_VIDEO = r'..\DoVideo\1091662177785761792.mp4'
+TEMP_VIDEO2 = r'..\DoVideo\1041395139956232192.mp4'
 TEMP_IMG = r'..\DoVideo\Img\temp.jpg'
 TEMP_FACE_IMG = r'..\DoVideo\Img\Snipaste_2019-06-20_21-35-42.jpg'
 
