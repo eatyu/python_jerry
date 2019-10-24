@@ -12,7 +12,7 @@ base_img_dir = ba.IMG_PATH
 
 
 def get_imgs(path):
-    classfier = cv2.CascadeClassifier(ba.cc_alt2)
+    classfier = cv2.CascadeClassifier(ba.cc_alt2_conda)
 
     # 创建存储图片的文件夹
     img_dir = get_dir_name()
