@@ -1,0 +1,29 @@
+今天删除了以前安装的python，采用Miniconda管理方式重新安装了python
+这样可以利用Miniconda建立不同的虚拟环境，处理不同的项目，不必要总是在全局中安装python依赖的第三方库
+
+
+Miniconda的使用方式如下链接所演示的一样
+https://zh.d2l.ai/chapter_prerequisite/install.html
+
+
+但是中间出现了很多次的操作不成功，我把安装Miniconda的和windows之前装的python3.7都删除了，重新装了Miniconda就ok了。
+
+
+然后我需要建立一个当前项目的虚拟环境，因为“上面链接”建立的环境我主要是用来做科学计算的，这个环境是能运行我之前调试的图像程序的，
+所以需要再建立一个
+
+复制“上面链接”的environment.yml，再本地，然后我添加了 cv2的 python-opencv:3.4.2再文件尾部
+执行 conda env create -f environment.yml时，一直是运行中失败
+
+分析了运行日志发现是下载不了运行中断了，这个交互很不友好，因为失败了也没有上面提示，但是看不到库安装的日志就可以确认是安装失败了
+
+删掉opencv的配置，再安装
+
+然后启用这个虚拟环境conda activate python_jerry
+
+再启用后再这个虚拟的运行环境中执行
+
+conda install -c menpo opencv
+
+安装opencv2成功
+ok
