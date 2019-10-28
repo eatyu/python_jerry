@@ -39,3 +39,6 @@ def search(names, special):
 first_name = ["tom", "tony", "zik"]
 search(first_name, "tom")
 search(first_name, "opop")
+
+if 60 > 40 & 60 < 70:
+    print("yes")
