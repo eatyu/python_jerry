@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 x = 12
-strv = '123'
+str_v = '123'
 # int(x [,base ])	将x转换为一个整数
 # int('字符串',这里表示前面的字符串是多少进制的字符串)
 print(int('1C', 16))

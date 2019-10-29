@@ -5,8 +5,10 @@
 
 set1 = set('hello')
 set2 = set(['p', 'y', 'y', 'h', 'o', 'n'])
+set2_v = {'p', 'y', 'y', 'h', 'o', 'n'}
 print(set1)
 print(set2)
+print(type(set2_v))
 
 setstr = set('秦王统一六国')
 print(setstr)
