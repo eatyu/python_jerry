@@ -52,6 +52,8 @@ Person.desp = person_desp
 # 方法替换后，在对象中也是生效的
 p1.desp()
 
+print(p1.desp)
+
 # 析构函数
 del p1
 
