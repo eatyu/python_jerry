@@ -11,11 +11,16 @@ def upper_attr(future_class_name, future_class_parents, future_class_attr):
     return type(future_class_name, future_class_parents, uppercase_attr)
 
 
-__metaclass__ = upper_attr
+# 这个是python2的写法
+# class Foo(object):
+#     # 我们也可以只在这里定义__metaclass__，这样就只会作用于这个类中
+#     __metaclass__ = upper_attr
+#     bar = 'bip'
 
-
-class Foo(object):
+# 下面是python3的写法
+class Foo(metaclass=upper_attr):
     # 我们也可以只在这里定义__metaclass__，这样就只会作用于这个类中
+    __metaclass__ = upper_attr
     bar = 'bip'
 
 

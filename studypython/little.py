@@ -19,6 +19,8 @@ for x in lista:
 listc = [1, 2, 3, 4, 5]
 print(max(listc))
 print(listc.count(2))
+listc.extend(lista)
+print(listc)
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
