@@ -19,7 +19,6 @@ def upper_attr(future_class_name, future_class_parents, future_class_attr):
 
 # 下面是python3的写法
 class Foo(object, metaclass=upper_attr):
-    # 我们也可以只在这里定义__metaclass__，这样就只会作用于这个类中
     bar = 'bip'
 
 
